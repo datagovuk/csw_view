@@ -95,14 +95,6 @@ class CSWCommand(cmd.Cmd):
         sys.exit(0)
 
 
-
-        # ['abstract', 'accessrights', 'alternative', 'bbox', 'bbox_wgs84', 'contributor', 'coverage', 'created', 'creator', 'date', 'format', 'identifier', 'identifiers', 'ispartof', 'issued', 'language', 'license', 'modified', 'publisher', 'rdf', 'references', 'relation', 'rights', 'rightsholder', 'source', 'spatial', 'subjects', 'temporal', 'title', 'type', 'uris', 'xml']
-
-def info(url):
-
-
-    print "Total: {}".format(count)
-
 if __name__ == '__main__':
     c = CSWCommand()
     c.setup(sys.argv)
