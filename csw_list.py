@@ -38,12 +38,12 @@ class CSWCommand(cmd.Cmd):
             print "Not connected, use connect command first"
             return
 
-        self.csw.getrecordbyid(id=line)
+        self.csw.getrecordbyid(id=[line.strip()])
         record = self.csw.records[line]
         for k, v in record.__dict__.iteritems():
             if k[0] == '_':
                 continue
-            print "  {}\t{}".format(k ,v)
+            print u"  {}\t{}".format(k ,v)
 
     def do_search(self, line):
         """
